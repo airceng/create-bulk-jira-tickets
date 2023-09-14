@@ -1,5 +1,11 @@
 import csv
 import sys
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+
+# logging.error("Error Logging")
+# logging.info("Info Logging")
 
 # Define a function to validate the CSV file
 def validate_csv(file_path):
