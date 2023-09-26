@@ -19,15 +19,14 @@ jira_api_token = sys.argv[2]
 template_type = sys.argv[3]
 
 if template_type == "GENERAL":
-    # Load the Jinja2 template
-    with open(general_template, 'r') as template_file:
-        template_content = template_file.read()
-    jinja_template = Template(template_content)
+    j2_template = general_template
 else:
-    # Load the Jinja2 template
-    with open(okra_template, 'r') as template_file:
-        template_content = template_file.read()
-    jinja_template = Template(template_content)
+    j2_template = okra_template
+
+# Load the Jinja2 template
+with open(j2_template, 'r') as template_file:
+    template_content = template_file.read()
+jinja_template = Template(template_content)
     
 # Extract parameters from command-line arguments
 project = sys.argv[4]
