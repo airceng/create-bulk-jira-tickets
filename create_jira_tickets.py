@@ -23,55 +23,33 @@ if template_type == "GENERAL":
     with open(general_template, 'r') as template_file:
         template_content = template_file.read()
     jinja_template = Template(template_content)
-    
-    # Extract parameters from command-line arguments
-    project = sys.argv[4]
-    summary = sys.argv[5]
-    jira_parent_id = sys.argv[6]
-    jira_assignee_id = sys.argv[7]
-    goal = sys.argv[8]
-    value = sys.argv[9]
-    description = sys.argv[10]
-    acceptance_criteria = sys.argv[11]
-    
-    # Create the ticket data dictionary
-    ticket_data = {
-        "project": project,
-        "summary": summary,
-        "jira_parent_id": jira_parent_id,
-        "jira_assignee_id": jira_assignee_id,
-        "goal": goal,
-        "value": value,
-        "description": description,
-        "acceptance_criteria": acceptance_criteria
-    }
 else:
     # Load the Jinja2 template
     with open(okra_template, 'r') as template_file:
         template_content = template_file.read()
     jinja_template = Template(template_content)
     
-    # Extract parameters from command-line arguments
-    project = sys.argv[4]
-    summary = sys.argv[5]
-    jira_parent_id = sys.argv[6]
-    jira_assignee_id = sys.argv[7]
-    goal = sys.argv[8]
-    value = sys.argv[9]
-    #description = sys.argv[10]
-    #acceptance_criteria = sys.argv[11]
-    
-    # Create the ticket data dictionary
-    ticket_data = {
-        "project": project,
-        "summary": summary,
-        "jira_parent_id": jira_parent_id,
-        "jira_assignee_id": jira_assignee_id,
-        "goal": goal,
-        "value": value,
-        #"description": description,
-        #"acceptance_criteria": acceptance_criteria
-    }
+# Extract parameters from command-line arguments
+project = sys.argv[4]
+summary = sys.argv[5]
+jira_parent_id = sys.argv[6]
+jira_assignee_id = sys.argv[7]
+goal = sys.argv[8]
+value = sys.argv[9]
+description = sys.argv[10]
+acceptance_criteria = sys.argv[11]
+
+# Create the ticket data dictionary
+ticket_data = {
+    "project": project,
+    "summary": summary,
+    "jira_parent_id": jira_parent_id,
+    "jira_assignee_id": jira_assignee_id,
+    "goal": goal,
+    "value": value,
+    "description": description,
+    "acceptance_criteria": acceptance_criteria
+}
 
 # Render the Jinja2 template
 ticket_json = jinja_template.render(ticket_data)
