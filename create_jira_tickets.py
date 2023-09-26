@@ -3,9 +3,13 @@ import requests
 from jinja2 import Template
 
 # Define your Jira API URL and credentials
-jira_url = 'https://your-jira-instance.atlassian.net/rest/api/3/issue'
+#jira_url = 'https://your-jira-instance.atlassian.net/rest/api/3/issue'
 #username = 'your-username'
 #api_token = 'your-api-token'
+
+# Jira API URL
+base_url = "https://abheetha-ishan.atlassian.net"
+api_url = f"{base_url}/rest/api/3/issue"
 
 # Load the Jinja2 template
 with open('jira_ticket_template.j2', 'r') as template_file:
@@ -41,7 +45,7 @@ ticket_json = jinja_template.render(ticket_data)
 
 # Create and send the ticket
 response = requests.post(
-    jira_url,
+    api_url,
     json=ticket_json,
     auth=(jira_username, jira_api_token),
     headers={'Content-Type': 'application/json'}
