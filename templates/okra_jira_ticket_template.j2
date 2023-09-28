@@ -1,125 +1,131 @@
 {
-    "summary": "OKRA : {{ project }} : {{ summary }}",
-    "project": {
-        "key": "SSR"
-    },
+  "fields": {
     "issuetype": {
-        "name": "Sub-task"
+      "name": "Sub-task"
     },
     "parent": {
-        "key": "{{ jira_parent_id }}"
+      "key": "{{ jira_parent_id }}"
     },
+    "project": {
+      "key": "SP"
+    },
+    "labels": [],
     "assignee": {
-        "id": "{{ jira_assignee_id }}"
+      "accountId": "{{ jira_assignee_id }}"
     },
     "description": {
-        "version": 1,
-        "type": "doc",
-        "content": [
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
             {
-                "type": "heading",
-                "attrs": {
-                    "level": 1
-                },
-                "content": [
-                    {
-                        "type": "text",
-                        "text": "Role/Goal/Value"
-                    }
-                ]
-            },
-            {
-                "type": "paragraph",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": "Role:",
-                        "marks": [
-                            {
-                                "type": "strong"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "text",
-                        "text": " As a SRE"
-                    },
-                    {
-                        "type": "hardBreak"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Goal:",
-                        "marks": [
-                            {
-                                "type": "strong"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "text",
-                        "text": "{{ goal }}"
-                    },
-                    {
-                        "type": "hardBreak"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Value:",
-                        "marks": [
-                            {
-                                "type": "strong"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "text",
-                        "text": "{{ value }}"
-                    }
-                ]
-            },
-            {
-                "type": "heading",
-                "attrs": {
-                    "level": 1
-                },
-                "content": [
-                    {
-                        "type": "text",
-                        "text": "Description"
-                    }
-                ]
-            },
-            {
-                "type": "paragraph",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": "{{ description }}"
-                    }
-                ]
-            },
-            {
-                "type": "heading",
-                "attrs": {
-                    "level": 1
-                },
-                "content": [
-                    {
-                        "type": "text",
-                        "text": "Acceptance Criteria"
-                    }
-                ]
-            },
-            {
-                "type": "paragraph",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": "OKRA Acceptance Criteria"
-                    }
-                ]
+              "type": "text",
+              "text": "Role/Goal/Value",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
             }
-        ]
-    }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Role: As a Site Reliability Engineer"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Goal: {{ goal }}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Value: {{ value }}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Description",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "{{ description }}"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Acceptance Criteria",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "OKRA Acceptance Criteria"
+            }
+          ]
+        }
+      ]
+    },
+    "summary": "OKRA : {{ project }} : {{ summary }}"
+  }
 }
