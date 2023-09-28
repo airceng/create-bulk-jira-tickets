@@ -1,129 +1,131 @@
-"fields": {
-  "issuetype": {
-    "name": "Sub-task"
-  },
-  "parent": {
-    "key": "{{ jira_parent_id }}"
-  },
-  "project": {
-    "key": "SP"
-  },
-  "labels": [],
-  "assignee": {
-    "accountId": "{{ jira_assignee_id }}"
-  },
-  "description": {
-    "version": 1,
-    "type": "doc",
-    "content": [
-      {
-        "type": "paragraph",
-        "content": [
-          {
-            "type": "text",
-            "text": "Role/Goal/Value",
-            "marks": [
-              {
-                "type": "strong"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "bulletList",
-        "content": [
-          {
-            "type": "listItem",
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Role: As a Site Reliability Engineer"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Goal: {{ goal }}"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Value: {{ value }}"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "content": [
-          {
-            "type": "text",
-            "text": "Description",
-            "marks": [
-              {
-                "type": "strong"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "content": [
-          {
-            "type": "text",
-            "text": "{{ description }}"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "content": [
-          {
-            "type": "text",
-            "text": "Acceptance Criteria",
-            "marks": [
-              {
-                "type": "strong"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "content": [
-          {
-            "type": "text",
-            "text": "{{ acceptance_criteria }}"
-          }
-        ]
-      }
-    ]
-  },
-  "summary": "{{ project }} : {{ summary }}"
+{
+  "fields": {
+    "issuetype": {
+      "name": "Sub-task"
+    },
+    "parent": {
+      "key": "{{ jira_parent_id }}"
+    },
+    "project": {
+      "key": "SP"
+    },
+    "labels": [],
+    "assignee": {
+      "accountId": "{{ jira_assignee_id }}"
+    },
+    "description": {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Role/Goal/Value",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Role: As a Site Reliability Engineer"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Goal: {{ goal }}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Value: {{ value }}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Description",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "{{ description }}"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Acceptance Criteria",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "{{ acceptance_criteria }}"
+            }
+          ]
+        }
+      ]
+    },
+    "summary": "{{ project }} : {{ summary }}"
+  }
 }
