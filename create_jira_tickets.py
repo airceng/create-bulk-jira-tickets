@@ -76,7 +76,7 @@ else:
 # Render the Jinja2 template
 ticket_json = jinja_template.render(ticket_data)
 
-print(f"Json Data : {ticket_json}")
+print(f"{ticket_json}")
 
 # Create and send the ticket
 response = requests.post(
