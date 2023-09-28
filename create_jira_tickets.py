@@ -78,10 +78,12 @@ ticket_json = jinja_template.render(ticket_data)
 
 print(f"{ticket_json}")
 
+payload = json.dumps(ticket_json)
+
 # Create and send the ticket
 response = requests.post(
     api_url,
-    json=ticket_json,
+    json=payload,
     auth=(jira_username, jira_api_token),
     headers={'Content-Type': 'application/json'}
 )
