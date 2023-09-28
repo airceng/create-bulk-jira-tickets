@@ -76,15 +76,14 @@ else:
 
 # Render the Jinja2 template
 ticket_json = jinja_template.render(ticket_data)
-
 print(f"{ticket_json}")
 
-payload = json.dumps(ticket_json)
+ticket_json_object = json.loads(ticket_json)
 
 # Create and send the ticket
 response = requests.post(
     api_url,
-    json=payload,
+    json=ticket_json_object,
     auth=(jira_username, jira_api_token),
     headers={'Content-Type': 'application/json'}
 )
