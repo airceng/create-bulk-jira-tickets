@@ -1,5 +1,6 @@
 import sys
 import requests
+import json
 from jinja2 import Template
 
 # Define your Jira API URL and credentials
